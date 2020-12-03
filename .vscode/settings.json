@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.eol": "\r\n",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.gitignore": false,
+    "**/.vscode": false,
+    "**/tsconfig.json": false,
+    "**/tslint.json": false,
+    "**/package-lock.json": true,
+    // "**/dist": true,
+    // "**/public": true,
+    // "**/node_modules": true,
+    // "**/*.js.map": true,
+    // "**/*.npmrc": true
+  }
+}
