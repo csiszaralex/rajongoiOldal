@@ -11,7 +11,7 @@
     "**/package-lock.json": true,
     // "**/dist": true,
     // "**/public": true,
-    // "**/node_modules": true,
+    "**/node_modules": true,
     // "**/*.js.map": true,
     // "**/*.npmrc": true
   }
