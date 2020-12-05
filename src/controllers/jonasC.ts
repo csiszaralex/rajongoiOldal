@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { Request, Response } from "express";
 import schema from "../models/jonasM";
+import { EWOULDBLOCK } from "constants";
 
 //? Mit ér ott az a string?
 const model = mongoose.model("JB", schema);
@@ -11,18 +12,18 @@ export default class Controller {
   public all(req: Request, res: Response): void {
     const fields = Object.keys(model.schema.obj);
     //. Limit
-    const limit = req.query.limit ? parseInt(req.query.limit.toString()) : 0;
-    delete req.query.limit;
+    let limit = req.query._limit ? parseInt(req.query._limit.toString()) : 0;
+    delete req.query._limit;
     //. Page
-    //? lehessen e limit nélkül, mondjuk akkor 10 a limit
-    const page = (req.query.page ? parseInt(req.query.page.toString()) - 1 : 0) * limit;
-    delete req.query.page;
+    if (req.query._page && limit === 0) limit = 10;
+    const page = (req.query._page ? parseInt(req.query._page.toString()) - 1 : 0) * limit;
+    delete req.query._page;
     //. Where (gte, lte)
     //.     Start és end
-    //.     id_gte _lte _ne nagyobb, kisebb, nem egyenlő
+    //.     id_gte _lte nagyobb, kisebb, nem egyenlő
     //!     MAJD
     //. Select
-    const select = req.query._ ? req.query._.toString().split("|").join(" ") : "";
+    const select = req.query._ ? req.query._.toString().split(",").join(" ") : "";
     delete req.query._;
     //. Sort
     //. asc-növekvő; desc-csökkenő --> -1 csökk, 1 nő
@@ -36,29 +37,41 @@ export default class Controller {
     }
     //. Filter
     let filters = {};
-    //? Ha olyat ír, amivel nem lehet mit kezdeni, azt figyelmen kívül hagyja
-    for (var key in req.query) if (!fields.includes(key) && key !== "_id") delete req.query[key];
-    filters = { ...req.query };
+    //? Ha olyat ír, amivel nem lehet mit kezdeni, azt figyelmen kívül hagyja + "null"-ból null
+    for (var key in req.query) {
+      if (!fields.includes(key) && key !== "_id") delete req.query[key];
+      else if (req.query[key] === "null") {
+        filters = { ...filters, [key]: null };
+        delete req.query[key];
+      }
+    }
+    filters = { ...filters, ...req.query };
 
     console.log(filters);
+    //. Group by -- Aggregate
+    //. ! jel --> !=
     //. Ha egyenlőség van és 1 a limit akkor mi legyen?!
     //? more=true ? ?Filter, !Skip, Limit, Sort, ?Select
     model
-    .find(filters)
-    .skip(page)
-    .limit(limit)
-    .sort(sort)
-    .select(select)
-    .exec((err, data) => (err ? res.send(err) : res.json(data)));
+      .find(filters)
+      .skip(page)
+      .limit(limit)
+      .sort(sort)
+      .select(select)
+      .exec((err, data) => (err ? res.send(err) : res.json(data)));
   }
   //*POST
   public add(req: Request, res: Response): void {
     const newC = new model(req.body);
-    newC.save((err, data) => (err ? res.send(err) : res.json(data)));
+    newC.save((err, data) =>
+      err
+        ? res.json({ status: "Error", msg: err.message })
+        : res.json({ status: "Success", msg: data.id })
+    );
   }
 
   //- PATCH, DELETE id-ra
   //* GET, hogy ?_id helyett / is lehessen
-  //*PATCH
   //*DELETE
+  //*PATCH
 }

@@ -1,1 +1,6 @@
 {"_id":{"$oid":"5fc8c0e23080518380097a18"},"tipus":0,"cim":"sucker","hossz":199,"kt":"-","kiadas":2019,"kiado":"Jonas Brothers Recording"}
+{"_id":{"$oid":"5fcaadd25afe430e607e1cbe"},"tipus":0,"cim":"valami","hossz":52,"kiadas":2010}
+{"_id":{"$oid":"5fcaae1e5afe430e607e1cbf"},"tipus":1,"cim":"Film teszt","hossz":53016231,"kiadas":2007,"kiado":"Disney"}
+{"_id":{"$oid":"5fcb751c3420e18d14555238"},"tipus":0,"cim":"Zene T","hossz":183,"kiadas":2017,"kiado":"Gold Record"}
+{"_id":{"$oid":"5fcb784e782b6c6bec9ccaad"},"tipus":0,"cim":"Zene T5","hossz":117,"kiadas":2013,"kiado":"Valami híres kiadó"}
+{"_id":{"$oid":"5fcb7ada0bbae119c45dabad"},"tipus":2,"cim":"Sori","hossz":5238,"kiadas":2018}

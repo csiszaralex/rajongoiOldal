@@ -71,14 +71,73 @@ npm run compile
 - Frontend Dev:
 
 ## API
-### GET:
-/api?asd=5 -> Szűri, ahol az asd értéke 5
-/api?limit=2 -> csak 2 értéket jelení meg
-/api?page=2&limit=3 -> A 2. 3 értéket jeleníti meg, csak limittel használható, első oldal page=1-nél
-/api?_=tipus|hossz -> Csak a tipus és hossz azonosítójú mezőket írja ki
-/api?_hossz=-1 -> A hossz alapján csökkenő sorrendben mutatja
 
+### Útvonalak:
 
+```
+GET     /api
+GET     /api/ID
+POST    /api
+PATCH   /api/ID
+DELETE  /api/ID
+```
+
+### Szűrés
+
+Használd a mező nevét, valamint a keresendő értéket.
+
+```
+GET  /api?tipus=0
+GET  /api?tipus=0&tipus=1
+GET  /api?tipus=0&hossz=199
+```
+
+### Lapszámozás
+
+Használd a `_limit`-et annak beállítására, hogy mennyi rekord jelenlen meg a képernyőn.
+
+A `_page`-el beállíthatod, hogy hányadik oldal adatát jelenítse meg. A `_limit` megadása nélkül annak alap értéke 10 lesz.
+
+```
+GET  /api?_limit=3
+GET  /api?_limit=3&_page=2
+```
+
+Az oldalak számozása 1-el kezdődik.
+
+### Rendezés
+
+Használd a mező nevét, előtte egy \_-al a rendezéshez.
+
+Elfogadott értékek:
+
+- Csökken sorrend: `-1`, `asc`, `ascending`
+- Növekvő sorrend: `1`, `desc`, `descending`
+
+```
+GET  /api?_tipus=asc
+GET  /api?_tipus=-1&_hossz=1
+```
+
+Több rendezési érték esetén egymás után lesznek rendezve.
+
+### Megjelenő mezők szűrése
+
+A `_`-nak értékként megadható, hogy a lekérdezésben mely mezők jelenlenjenek meg.
+
+Ha több mezőt akarunk visszakapni, akkor a mezőneveket vesszővel elválasztva kaphatjuk meg azokat.
+
+```
+GET  /api?_=hossz
+GET  /api?_=hossz,cim
+```
+
+Az _id értékét minden esetben mutatja.
+
+### Kell még:
+
+- Szöveg vágása: start, end, limit
+- Nagyobb, kisebb, nem egyenlő
 
 ## Tesztek
 
@@ -86,11 +145,16 @@ npm run compile
 
 A projekt és annak tartalma az [MIT license][license] alatt van, beleértve minden forráskódot és megjelenítéshez használt kódot.
 
+<!-- Dependecies -->
+
 [express]: https://expressjs.com/
 [mongoose]: https://mongoosejs.com/
-[node]:https://nodejs.org/en/about/
+[node]: https://nodejs.org/en/about/
 [ts]: https://www.typescriptlang.org/
 [nodemon]: https://nodemon.io/
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/
+
+<!-- Licensz -->
+
 [license]: https://github.com/csiszaralex/rajongoiOldal/blob/master/LICENSE.md
