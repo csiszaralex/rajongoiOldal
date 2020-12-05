@@ -71,6 +71,14 @@ npm run compile
 - Frontend Dev:
 
 ## API
+### GET:
+/api?asd=5 -> Szűri, ahol az asd értéke 5
+/api?limit=2 -> csak 2 értéket jelení meg
+/api?page=2&limit=3 -> A 2. 3 értéket jeleníti meg, csak limittel használható, első oldal page=1-nél
+/api?_=tipus|hossz -> Csak a tipus és hossz azonosítójú mezőket írja ki
+/api?_hossz=-1 -> A hossz alapján csökkenő sorrendben mutatja
+
+
 
 ## Tesztek
 

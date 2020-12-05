@@ -1,0 +1,13 @@
+tipus:
+  0-zene
+  1-film
+  2-műsor
+  3-vendég
+cim: Címe
+hossz:
+  0: hossza
+  3: Mikor bukkkant fel
+kt:
+  0: közreműködő
+kiadás: Mikor adták ki
+kiado: Kiadó

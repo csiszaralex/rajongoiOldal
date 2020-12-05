@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 //- Routes
-import Jonas from "./routes/jonasR"; //. Ha több van akkor a Routes-ben más név kell a classnek, h ne akadjanaok össze
+import Jonas from "./routes/jonasR";
 
 class App {
   public app: express.Application;
