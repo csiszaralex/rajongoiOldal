@@ -7,15 +7,35 @@ export default class Jonas {
   public routes(app: Application): void {
     app
       .route("/api")
+      .post(async (req: Request, res: Response, next: NextFunction) => {
+        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        next();
+      }, this.controller.add)
       .get(async (req: Request, res: Response, next: NextFunction) => {
-        console.log(`${req.method} request on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
         next();
-      }, this.controller.all)
-      .post((req: Request, res: Response, next: NextFunction) => {
-        console.log(
-          `${req.method} request on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`
-        );
+      }, this.controller.get)
+      .delete(async (req: Request, res: Response, next: NextFunction) => {
+        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
         next();
-      }, this.controller.add);
+      }, this.controller.del)
+      .patch(async (req: Request, res: Response, next: NextFunction) => {
+        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        next();
+      }, this.controller.upd);
+    app
+      .route("/api/:ID")
+      .get(async (req: Request, res: Response, next: NextFunction) => {
+        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        next();
+      }, this.controller.getO)
+      .delete(async (req: Request, res: Response, next: NextFunction) => {
+        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        next();
+      }, this.controller.delO)
+      .patch(async (req: Request, res: Response, next: NextFunction) => {
+        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        next();
+      }, this.controller.updO);
   }
 }

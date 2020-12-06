@@ -78,18 +78,24 @@ npm run compile
 GET     /api
 GET     /api/ID
 POST    /api
+PATCH   /api
 PATCH   /api/ID
+DELETE  /api
 DELETE  /api/ID
 ```
+
+A `DELETE` és a `PATCH` kizárólag szűrő, vagy ID megadásával használható, ezzel elkerülve, hogy véletlenül az összes adatot töröljük, vagy módosítsuk.
 
 ### Szűrés
 
 Használd a mező nevét, valamint a keresendő értéket.
 
 ```
-GET  /api?tipus=0
-GET  /api?tipus=0&tipus=1
-GET  /api?tipus=0&hossz=199
+GET     /api?tipus=0
+GET     /api?tipus=0&tipus=1
+GET     /api?tipus=0&hossz=199
+PATCH   /api?tipus=1
+DELETE  /api?hossz=199
 ```
 
 ### Lapszámozás
@@ -130,14 +136,24 @@ Ha több mezőt akarunk visszakapni, akkor a mezőneveket vesszővel elválasztv
 ```
 GET  /api?_=hossz
 GET  /api?_=hossz,cim
+GET  /api/ID?_=hossz
 ```
 
-Az _id értékét minden esetben mutatja.
+Az \_id értékét minden esetben mutatja.
 
 ### Kell még:
 
 - Szöveg vágása: start, end, limit
+  - IDra is
 - Nagyobb, kisebb, nem egyenlő
+  - Where lte, ne, gte
+  - .or .and
+  - .where(X).equals(érték).or(Y).equals(érték)
+- ! jelből .ne, vagy !=
+- "null"-ból null kész, de !Null, v ilyesmi?!
+- Group by
+- Ha valami leg-et keresünk és limit=1, viszont több leg is van, akkor pl more=true-val mindet visszaadni
+  - Ehhez kell: Limit, sort, !Skip
 
 ## Tesztek
 
