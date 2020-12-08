@@ -6,7 +6,7 @@ tipus:
 cim: Címe
 hossz:
   0: hossza
-  3: Mikor bukkkant fel
+  3: Mikor bukkant fel
 kt:
   0: közreműködő
 kiadás: Mikor adták ki
