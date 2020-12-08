@@ -56,6 +56,10 @@ npm run compile
 
 ## Közreműködők
 
+- [Borbély Bálint][bálint]
+- [Csiszár Alex Gergő][alex]
+- [Kardos Raul][raul]
+
 ## Csomagok
 
 - Backend:
@@ -174,3 +178,9 @@ A projekt és annak tartalma az [MIT license][license] alatt van, beleértve min
 <!-- Licensz -->
 
 [license]: https://github.com/csiszaralex/rajongoiOldal/blob/master/LICENSE.md
+
+<!-- Közreműködők -->
+
+[bálint]: https://github.com/thisisjustaguy
+[alex]: https://github.com/csiszaralex
+[raul]: https://github.com/krdsrl
