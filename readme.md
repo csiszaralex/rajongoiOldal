@@ -76,6 +76,8 @@ npm run compile
 
 ## API
 
+A `db` mappába található data.json fájl alapján.
+
 ### Útvonalak:
 
 ```
@@ -160,6 +162,10 @@ Az \_id értékét minden esetben mutatja.
   - Ehhez kell: Limit, sort, !Skip
 
 ## Tesztek
+
+### Bakcend:
+
+    - Hogy kell
 
 ## License
 
