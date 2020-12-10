@@ -1,0 +1,57 @@
+{
+  "editor.minimap.enabled": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "vue"
+  ],
+  "vetur.validation.template": false,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.formatOnSave": true
+  },
+  "spellright.language": [
+    "en",
+    "hu"
+  ],
+  "spellright.documentTypes": [
+    "latex"
+  ],
+  "terminal.integrated.rendererType": "dom",
+  "files.autoSave": "afterDelay",
+  "files.exclude": {  
+    "**/.git": true,
+    "**/.gitignore": false,
+    "**/.vscode": false,
+    "**/tsconfig.json": false,
+    "**/tslint.json": false,
+    "**/package-lock.json": true,
+    "**/dist": true,
+    "**/public": false,
+    "**/node_modules": true,
+    "**/*.js.map": true,
+    "**/*.npmrc": true
+  },
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetchPeriod": 60,
+  "git.autofetch": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
