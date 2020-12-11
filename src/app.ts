@@ -40,7 +40,6 @@ class App {
       useFindAndModify: false,
       useUnifiedTopology: true,
     };
-    // require("mongoose").Promise = global.Promise;
     mongoose.connect(this.mongoUrl, options).catch(console.error);
   }
 }

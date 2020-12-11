@@ -23,6 +23,7 @@ export default class Jonas {
         console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
         next();
       }, this.controller.upd);
+
     app
       .route("/api/:ID")
       .get(async (req: Request, res: Response, next: NextFunction) => {

@@ -2,7 +2,7 @@
   "name": "fanpage",
   "version": "1.0.0",
   "description": "Egy egyszerű rajongói oldal",
-  "main": "serer/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node ./dist/index.js",
     "dev": "nodemon",
