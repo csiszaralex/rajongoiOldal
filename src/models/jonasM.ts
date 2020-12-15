@@ -41,4 +41,13 @@ const schema: mongoose.Schema = new mongoose.Schema(
   schemaOptions
 );
 
+export interface IJonas {
+  tipus: Number;
+  cim: string;
+  hossz?: Number;
+  kt?: string;
+  kiadas: Number;
+  kiado?: String;
+}
+
 export default schema;

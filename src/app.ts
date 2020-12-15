@@ -40,7 +40,9 @@ class App {
       useFindAndModify: false,
       useUnifiedTopology: true,
     };
-    mongoose.connect(this.mongoUrl, options).catch(console.error);
+    mongoose.connect(this.mongoUrl, options)
+    .then(() => console.log('\u001b[35m[START]\u001b[0m Connected to database'))
+    .catch(console.error);
   }
 }
 

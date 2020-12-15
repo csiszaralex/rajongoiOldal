@@ -8,13 +8,13 @@
     "sourceMap": true,
     "removeComments": true,
     "experimentalDecorators": true,
-    "target": "es6",
+    "target": "esnext",
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "baseUrl": "./src", //Melyik mappa a TS fileok alapja
     "outDir": "./dist", //Melyik mappa legyen a JS fileok helye
-    "types": ["node", "express"], //A node_modules mappából melyik filok legyenek könnyen importálhatóak
+    "types": ["node", "express", "jest"], //A node_modules mappából melyik filok legyenek könnyen importálhatóak
     "typeRoots": ["node_modules/@types"] //Hol vannak a fentiek
   },
   "include": ["src/**/*"],

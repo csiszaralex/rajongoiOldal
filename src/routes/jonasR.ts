@@ -8,35 +8,43 @@ export default class Jonas {
     app
       .route("/api")
       .post(async (req: Request, res: Response, next: NextFunction) => {
-        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        this.log(req);
         next();
       }, this.controller.add)
       .get(async (req: Request, res: Response, next: NextFunction) => {
-        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        this.log(req);
         next();
       }, this.controller.get)
       .delete(async (req: Request, res: Response, next: NextFunction) => {
-        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        this.log(req);
         next();
       }, this.controller.del)
       .patch(async (req: Request, res: Response, next: NextFunction) => {
-        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        this.log(req);
         next();
       }, this.controller.upd);
 
     app
       .route("/api/:ID")
       .get(async (req: Request, res: Response, next: NextFunction) => {
-        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        this.log(req);
         next();
       }, this.controller.getO)
       .delete(async (req: Request, res: Response, next: NextFunction) => {
-        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        this.log(req);
         next();
       }, this.controller.delO)
       .patch(async (req: Request, res: Response, next: NextFunction) => {
-        console.log(`${req.method} on ${req.originalUrl} at ${new Date().toLocaleTimeString()}`);
+        this.log(req);
         next();
       }, this.controller.updO);
+  }
+
+  public log(req: Request): void {
+    console.log(
+      `\u001b[34m[${req.method}]\u001b[0m on ${
+        req.originalUrl
+      } at ${new Date().toLocaleTimeString()}`
+    );
   }
 }

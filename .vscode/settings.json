@@ -10,8 +10,8 @@
     "**/tslint.json": false,
     "**/package-lock.json": true,
     "**/dist": true,
-    // "**/public": true,
     "**/node_modules": true
+    // "**/public": true,
     // "**/*.js.map": true,
     // "**/*.npmrc": true
   },
