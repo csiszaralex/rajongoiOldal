@@ -5,5 +5,4 @@ describe("Jonas tests", ()=>{
     const a = "Alma";
     expect(a).toBeTruthy();
   });
-  
 });
