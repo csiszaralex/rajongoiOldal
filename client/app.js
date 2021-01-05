@@ -54,7 +54,7 @@ function fillFromDatabase() {
           "<br />" +
           "Kiadás: " +
           element.kiadas +
-          "</p></div>";
+          `</p><button type="button" class="btn btn-primary" id="${element._id}">Szavazás</button></div>`;
         document.querySelector(".content").appendChild(div);
         if (!onceRun) {
           onceRun = true;
@@ -112,7 +112,7 @@ function filterButton() {
               "<br />" +
               "Kiadás: " +
               element.kiadas +
-              "</p></div>";
+              `</p><button type="button" class="btn btn-primary" id="${element._id}">Szavazás</button></div>`;
             document.querySelector(".content").appendChild(div);
           });
         })
