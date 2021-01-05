@@ -37,6 +37,12 @@ const schema: mongoose.Schema = new mongoose.Schema(
     kiado: {
       type: String,
     },
+    votes: {
+      default: 0,
+      required: true,
+      type: Number,
+      min: 0,
+    },
   },
   schemaOptions
 );

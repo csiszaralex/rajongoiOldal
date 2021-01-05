@@ -1,1 +1,1 @@
-"C:\Program Files\MongoDB\Tools\100\bin\mongoimport.exe" -h localhost -d JBdb -c JB --drop --file data.json
+"C:\Program Files\MongoDB\Tools\100\bin\mongoimport.exe" -h localhost -d JBdb -c JB --drop --file data.json --jsonArray

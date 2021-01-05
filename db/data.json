@@ -1,16 +1,135 @@
-{"_id":{"$oid":"5fc8c0e23080518380097a18"},"tipus":0,"cim":"sucker","hossz":199,"kt":"-","kiadas":2019,"kiado":"Jonas Brothers Recording"}
-{"_id":{"$oid":"5fcaadd25afe430e607e1cbe"},"tipus":0,"cim":"valami","hossz":52,"kiadas":2010}
-{"_id":{"$oid":"5fcaae1e5afe430e607e1cbf"},"tipus":1,"cim":"Film teszt","hossz":53016231,"kiadas":2007,"kiado":"Disney"}
-{"_id":{"$oid":"5fcb751c3420e18d14555238"},"tipus":0,"cim":"Zene T","hossz":183,"kiadas":2017,"kiado":"Gold Record"}
-{"_id":{"$oid":"5fcb784e782b6c6bec9ccaad"},"tipus":0,"cim":"Zene T5","hossz":117,"kiadas":2013,"kiado":"Valami híres kiadó"}
-{"_id":{"$oid":"5fcb7ada0bbae119c45dabad"},"tipus":2,"cim":"Sori","hossz":5238,"kiadas":2018}
-{"_id":{"$oid":"5fcbf36c3bbb359650e7cf08"},"tipus":3,"cim":"Vendég","hossz":521378,"kiadas":2015}
-{"_id":{"$oid":"5fcbfc9622f4fa9e9409ce3c"},"tipus":2,"cim":"Teszt","kiadas":2018,"kiado":"Magyar"}
-{"_id":{"$oid":"5fcbfc9a22f4fa9e9409ce3d"},"tipus":0,"cim":"Zene","hossz":123,"kiadas":1993}
-{"_id":{"$oid":"5fcbfc9e22f4fa9e9409ce3e"},"tipus":1,"cim":"Film","kiadas":2000,"kiado":"Valasdami híres kiadó"}
-{"_id":{"$oid":"5fcbfca222f4fa9e9409ce3f"},"tipus":0,"cim":"Zene T","hossz":241,"kiadas":2007,"kiado":"Magyar"}
-{"_id":{"$oid":"5fcbfca822f4fa9e9409ce40"},"tipus":1,"cim":"Film T","kiadas":2009,"kiado":"Valami híres kiadó"}
-{"_id":{"$oid":"5fcbfcaf22f4fa9e9409ce41"},"tipus":2,"cim":"Sori T","kiadas":2006}
-{"_id":{"$oid":"5fcbfcb122f4fa9e9409ce42"},"tipus":2,"cim":"Sorozat","kiadas":2012}
-{"_id":{"$oid":"5fcbfcb622f4fa9e9409ce43"},"tipus":3,"cim":"Vendég T","hossz":15746,"kiadas":2012,"kiado":"Marvek"}
-{"_id":{"$oid":"5fcbfcb822f4fa9e9409ce44"},"tipus":0,"cim":"Még egy zene","hossz":36,"kiadas":2010}
+[
+  {
+    "_id": { "$oid": "5fc8c0e23080518380097a18" },
+    "tipus": 0,
+    "cim": "sucker",
+    "hossz": 199,
+    "kt": "-",
+    "kiadas": 2019,
+    "kiado": "Jonas Brothers Recording",
+    "votes": 10
+  },
+  {
+    "_id": { "$oid": "5fcaadd25afe430e607e1cbe" },
+    "tipus": 0,
+    "cim": "valami",
+    "hossz": 52,
+    "kiadas": 2010,
+    "votes": 1
+  },
+  {
+    "_id": { "$oid": "5fcaae1e5afe430e607e1cbf" },
+    "tipus": 1,
+    "cim": "Film teszt",
+    "hossz": 53016231,
+    "kiadas": 2007,
+    "kiado": "Disney",
+    "votes": 0
+  },
+  {
+    "_id": { "$oid": "5fcb751c3420e18d14555238" },
+    "tipus": 0,
+    "cim": "Zene T",
+    "hossz": 183,
+    "kiadas": 2017,
+    "kiado": "Gold Record",
+    "votes": 0
+  },
+  {
+    "_id": { "$oid": "5fcb784e782b6c6bec9ccaad" },
+    "tipus": 0,
+    "cim": "Zene T5",
+    "hossz": 117,
+    "kiadas": 2013,
+    "kiado": "Valami híres kiadó",
+    "votes": 3
+  },
+  {
+    "_id": { "$oid": "5fcb7ada0bbae119c45dabad" },
+    "tipus": 2,
+    "cim": "Sori",
+    "hossz": 5238,
+    "kiadas": 2018,
+    "votes": 7
+  },
+  {
+    "_id": { "$oid": "5fcbf36c3bbb359650e7cf08" },
+    "tipus": 3,
+    "cim": "Vendég",
+    "hossz": 521378,
+    "kiadas": 2015,
+    "votes": 23
+  },
+  {
+    "_id": { "$oid": "5fcbfc9622f4fa9e9409ce3c" },
+    "tipus": 2,
+    "cim": "Teszt",
+    "kiadas": 2018,
+    "kiado": "Magyar",
+    "votes": 5
+  },
+  {
+    "_id": { "$oid": "5fcbfc9a22f4fa9e9409ce3d" },
+    "tipus": 0,
+    "cim": "Zene",
+    "hossz": 123,
+    "kiadas": 1993,
+    "votes": 2
+  },
+  {
+    "_id": { "$oid": "5fcbfc9e22f4fa9e9409ce3e" },
+    "tipus": 1,
+    "cim": "Film",
+    "kiadas": 2000,
+    "kiado": "Valasdami híres kiadó",
+    "votes": 1
+  },
+  {
+    "_id": { "$oid": "5fcbfca222f4fa9e9409ce3f" },
+    "tipus": 0,
+    "cim": "Zene T",
+    "hossz": 241,
+    "kiadas": 2007,
+    "kiado": "Magyar",
+    "votes": 3
+  },
+  {
+    "_id": { "$oid": "5fcbfca822f4fa9e9409ce40" },
+    "tipus": 1,
+    "cim": "Film T",
+    "kiadas": 2009,
+    "kiado": "Valami híres kiadó",
+    "votes": 5
+  },
+  {
+    "_id": { "$oid": "5fcbfcaf22f4fa9e9409ce41" },
+    "tipus": 2,
+    "cim": "Sori T",
+    "kiadas": 2006,
+    "votes": 7
+  },
+  {
+    "_id": { "$oid": "5fcbfcb122f4fa9e9409ce42" },
+    "tipus": 2,
+    "cim": "Sorozat",
+    "kiadas": 2012,
+    "votes": 0
+  },
+  {
+    "_id": { "$oid": "5fcbfcb622f4fa9e9409ce43" },
+    "tipus": 3,
+    "cim": "Vendég T",
+    "hossz": 15746,
+    "kiadas": 2012,
+    "kiado": "Marvek",
+    "votes": 0
+  },
+  {
+    "_id": { "$oid": "5fcbfcb822f4fa9e9409ce44" },
+    "tipus": 0,
+    "cim": "Még egy zene",
+    "hossz": 36,
+    "kiadas": 2010,
+    "votes": 2
+  }
+]
