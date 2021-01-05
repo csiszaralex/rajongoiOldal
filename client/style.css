@@ -5,3 +5,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+#keszitok {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
