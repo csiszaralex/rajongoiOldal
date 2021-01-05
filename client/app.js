@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $(".page").load("kezdolap.html");
+
   $("#kezdolap").click(function () {
     $(".page").load("kezdolap.html");
     changeActiveTab("kezdolap");
