@@ -39,6 +39,7 @@ const schema: mongoose.Schema = new mongoose.Schema(
     },
     votes: {
       default: 0,
+      required: true,
       type: Number,
       min: 0,
     },

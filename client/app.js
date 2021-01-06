@@ -1,40 +1,48 @@
-$(document).ready(function () {
-  $(".page").load("kezdolap.html");
+function VoteButtons(id) {
+  console.log("Start");
+  let currentVotes;
+  axios
+    .get(`http://localhost:5000/api/?_id=${id}`)
+    .then(function (response) {
+      currentVotes = parseInt(response.data[0].votes);
+      console.log(currentVotes);
+      addVote(currentVotes + 1, id);
+    })
+    .catch(function () {
+      console.log("baj van tesó");
+    });
+}
 
-  $("#kezdolap").click(function () {
-    $(".page").load("kezdolap.html");
-    changeActiveTab("kezdolap");
-  });
+function addVote(currentVotes, id) {
+  console.log(id);
+  axios
+    .patch(`http://localhost:5000/api/?_id=${id}`, {
+      votes: currentVotes,
+    })
+    .then(function () {
+      console.log("kész");
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 
-  $("#bongeszes").click(function () {
-    $(".page").load("bongeszes.html", filterButton);
-
-    changeActiveTab("bongeszes");
-
-    fillFromDatabase();
-  });
-
-  $("#keszitok").click(function () {
-    $(".page").load("keszitok.html");
-    changeActiveTab("keszitok");
-  });
-});
-
-function changeActiveTab(tab) {
-  let navs = document.querySelectorAll(".nav-link");
-  navs.forEach((x) => {
-    if (x.id == tab) {
-      x.classList.add("active");
-    } else {
-      x.classList.remove("active");
-    }
-  });
+function DeleteButtons(id) {
+  axios
+    .delete(`http://localhost:5000/api/?_id=${id}`)
+    .then(function () {
+      console.log("kész");
+      location.reload();
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 
 function fillFromDatabase() {
   let onceRun = false;
   axios
-    .get("http://localhost:5000/api")
+    .get("http://localhost:5000/api?_votes=descending")
     .then(function (response) {
       response.data.forEach((element) => {
         let div = document.createElement("div");
@@ -54,7 +62,11 @@ function fillFromDatabase() {
           "<br />" +
           "Kiadás: " +
           element.kiadas +
-          `</p><button type="button" class="btn btn-primary" id="${element._id}">Szavazás</button></div>`;
+          "<br />" +
+          "Szavazatok: " +
+          element.votes +
+          `</p><button type="button" onclick="VoteButtons(this.id)" class="btn vote btn-success" style="width:100px" id="${element._id}">Szavazás</button>` +
+          `<button type="button" onclick="DeleteButtons(this.id)" class="btn vote btn-outline-danger mx-2" style="width:100px" id="${element._id}">Törlés</button></div>`;
         document.querySelector(".content").appendChild(div);
         if (!onceRun) {
           onceRun = true;
@@ -92,7 +104,9 @@ function filterButton() {
     document.querySelector(".content").innerHTML = "";
     if (userInput != "") {
       axios
-        .get(`http://localhost:5000/api/?${selected}=${userInput}`)
+        .get(
+          `http://localhost:5000/api/?${selected}=${userInput}&_votes=descending`
+        )
         .then(function (response) {
           response.data.forEach((element) => {
             let div = document.createElement("div");
@@ -112,7 +126,11 @@ function filterButton() {
               "<br />" +
               "Kiadás: " +
               element.kiadas +
-              `</p><button type="button" class="btn btn-primary" id="${element._id}">Szavazás</button></div>`;
+              "<br />" +
+              "Szavazatok: " +
+              element.votes +
+              `</p><button type="button" class="btn btn-primary vote" id="${element._id}">Szavazás</button></div>` +
+              `<button type="button" onclick="DeleteButtons(this.id)" class="btn vote btn-outline-danger mx-2" style="width:100px" id="${element._id}">Törlés</button></div>`;
             document.querySelector(".content").appendChild(div);
           });
         })
@@ -137,6 +155,7 @@ function addNewButton() {
       })
       .then(function () {
         console.log("kész");
+        location.reload();
       })
       .catch(function (error) {
         console.log(error);
