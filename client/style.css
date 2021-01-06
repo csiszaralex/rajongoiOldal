@@ -1,9 +1,9 @@
-#search {
-  display: flex;
-}
 .content {
   display: flex;
   flex-wrap: wrap;
+}
+#search {
+  display: flex;
 }
 #keszitok {
   display: flex;
