@@ -9,10 +9,14 @@ export default class Jonas {
       .route("/api")
       .post(async (req: Request, res: Response, next: NextFunction) => {
         this.log(req);
+        console.log("req");
+        console.log(req.body);
         next();
       }, this.controller.add)
       .get(async (req: Request, res: Response, next: NextFunction) => {
         this.log(req);
+        console.log("req");
+        console.log(req.body);
         next();
       }, this.controller.get)
       .delete(async (req: Request, res: Response, next: NextFunction) => {
@@ -28,6 +32,8 @@ export default class Jonas {
       .route("/api/:ID")
       .get(async (req: Request, res: Response, next: NextFunction) => {
         this.log(req);
+        console.log(req.body);
+        
         next();
       }, this.controller.getO)
       .delete(async (req: Request, res: Response, next: NextFunction) => {
@@ -36,6 +42,10 @@ export default class Jonas {
       }, this.controller.delO)
       .patch(async (req: Request, res: Response, next: NextFunction) => {
         this.log(req);
+        
+        console.log("req");
+        console.log(req.query);
+        
         next();
       }, this.controller.updO);
   }
