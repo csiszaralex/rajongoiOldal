@@ -36,13 +36,15 @@ export default class Controller {
     delete req.query._;
     //. Sort
     let sort = {};
+
     for (let key in req.query) {
       key = key === "__id" ? "_id" : key.split("_")[1];
       if (fields.includes(key) || key === "_id") {
-        delete req.query["_" + key];
         sort = { ...sort, [key]: req.query["_" + key] };
+        delete req.query["_" + key];
       }
     }
+
     //. Filter
     let filters = {};
     for (var key in req.query) {
@@ -52,6 +54,7 @@ export default class Controller {
         delete req.query[key];
       }
     }
+
     filters = { ...filters, ...req.query };
     model
       .find(filters)
@@ -87,13 +90,14 @@ export default class Controller {
     }
   }
   //*PATCH
-  public upd(req: Request, res: Response): void {
+  public upd(req: Request, res: Response): void {    
     const fields = Object.keys(model.schema.obj);
     let filters = {};
     for (var key in req.query) {
       if (!fields.includes(key) && key !== "_id") delete req.query[key];
     }
     filters = { ...filters, ...req.query };
+
     const options: mongoose.QueryOptions = {
       new: true, // return the modified document
       runValidators: true, // runs update validators on this command
@@ -120,6 +124,7 @@ export default class Controller {
     //. Select
     const select = req.query._ ? req.query._.toString().split(",").join(" ") : "";
     delete req.query._;
+
     model
       .findById(req.params.ID)
       .select(select)
@@ -145,17 +150,20 @@ export default class Controller {
       new: true, // return the modified document
       runValidators: true, // runs update validators on this command
     };
-    model
-      .findById(req.params.ID)
-      .updateOne({}, req.body, options)
-      .exec((err, data) => {
-        if (err) {
-          res.status(400);
-          res.json({ status: "Error", msg: err.message });
-        } else {
-          res.status(201);
-          res.json({ status: "UPDATE successful", msg: data.n });
-        }
-      });
+    console.log("query");
+    console.log(req.body);
+    res.json(req.body);
+    // model
+    //   .findById(req.params.ID)
+    //   .updateOne({}, req.body, options)
+    //   .exec((err, data) => {
+    //     if (err) {
+    //       res.status(400);
+    //       res.json({ status: "Error", msg: err.message });
+    //     } else {
+    //       res.status(201);
+    //       res.json({ status: "UPDATE successful", msg: data.n });
+    //     }
+    //   });
   }
 }
