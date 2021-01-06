@@ -21,6 +21,7 @@ function addVote(currentVotes, id) {
     })
     .then(function () {
       console.log("kész");
+      location.reload();
     })
     .catch(function (error) {
       console.log(error);
