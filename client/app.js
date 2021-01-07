@@ -47,7 +47,7 @@ function fillFromDatabase() {
     .then(function (response) {
       response.data.forEach((element) => {
         let div = document.createElement("div");
-        div.classList.add("card", "col-md-6");
+        div.classList.add("card", "col-lg-6");
         div.innerHTML =
           '<div class="card-body"> <h5 class="card-title">ID: </h5> <p class="card-subtitle text-muted">' +
           element._id +
