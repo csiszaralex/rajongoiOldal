@@ -5,7 +5,6 @@ function VoteButtons(id) {
     .get(`http://localhost:5000/api/?_id=${id}`)
     .then(function (response) {
       currentVotes = parseInt(response.data[0].votes);
-      console.log(currentVotes);
       addVote(currentVotes + 1, id);
     })
     .catch(function () {
@@ -14,9 +13,10 @@ function VoteButtons(id) {
 }
 
 function addVote(currentVotes, id) {
-  console.log(id);
+  console.log("id",id);
+  console.log("vote",currentVotes);
   axios
-    .patch(`http://localhost:5000/api/?_id=${id}`, {
+    .patch(`http://localhost:5000/api/${id}`, {
       votes: currentVotes,
     })
     .then(function () {

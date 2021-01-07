@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 import { Request, Response } from "express";
 import schema from "../models/jonasM";
 
-//? Mit ér ott az a string?
 const model = mongoose.model("JB", schema);
 
 export default class Controller {
@@ -150,20 +149,20 @@ export default class Controller {
       new: true, // return the modified document
       runValidators: true, // runs update validators on this command
     };
-    console.log("query");
-    console.log(req.body);
-    res.json(req.body);
-    // model
-    //   .findById(req.params.ID)
-    //   .updateOne({}, req.body, options)
-    //   .exec((err, data) => {
-    //     if (err) {
-    //       res.status(400);
-    //       res.json({ status: "Error", msg: err.message });
-    //     } else {
-    //       res.status(201);
-    //       res.json({ status: "UPDATE successful", msg: data.n });
-    //     }
-    //   });
+    // console.log("query");
+    // console.log(req.body);
+    // res.json(req.body);
+    model
+      .findById(req.params.ID)
+      .updateOne({}, req.body, options)
+      .exec((err, data) => {
+        if (err) {
+          res.status(400);
+          res.json({ status: "Error", msg: err.message });
+        } else {
+          res.status(201);
+          res.json({ status: "UPDATE successful", msg: data.n });
+        }
+      });
   }
 }

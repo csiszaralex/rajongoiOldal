@@ -15,8 +15,6 @@ export default class Jonas {
       }, this.controller.add)
       .get(async (req: Request, res: Response, next: NextFunction) => {
         this.log(req);
-        console.log("req");
-        console.log(req.body);
         next();
       }, this.controller.get)
       .delete(async (req: Request, res: Response, next: NextFunction) => {
