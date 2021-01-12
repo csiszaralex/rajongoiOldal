@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="card-img-top" :src="forras" alt="BB" />
+    <img class="card-img-top" :src="forras" :alt="nev" />
     <div class="card-body">
       <h4 class="card-title mb-1">{{ nev }}</h4>
       <p class="card-subtitle text-muted mb-4">{{ szerep }}</p>
@@ -8,7 +8,6 @@
         <li class="card-text mt-2">{{ valami }}</li>
       </ul>
     </div>
-    <!-- Works! -->
   </div>
 </template>
 <script>

@@ -2,8 +2,8 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        prependData: ``,
-      },
-    },
-  },
+        prependData: `@import "@/../node_modules/bootstrap/scss/bootstrap.scss";`
+      }
+    }
+  }
 };
