@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-8">
-        <div v-for="adat in adatok" :key="adat._id" class="col-md-6 card">
+      <div class="col-lg-8 row">
+        <div v-for="adat in adatok" :key="adat._id" class="col-sm-6 card">
           <bongeszes-card
             :id="adat._id"
             :tipus="adat.tipus"
@@ -10,6 +10,8 @@
             :hossz="adat.hossz"
             :kiadas="adat.kiadas"
             :szavazatok="adat.votes"
+            @vote="vote"
+            @del="del"
           ></bongeszes-card>
         </div>
       </div>
@@ -41,6 +43,7 @@ import BongeszesCard from '../components/bongeszes/BongeszesCard';
 export default {
   components: { BongeszesCard },
   setup() {
+    //*Hozzáadás
     const tipus = ref('');
     const cim = ref('');
     const hossz = ref('');
@@ -54,12 +57,14 @@ export default {
           kiadas: kiadas.value
         })
         .then(function() {
+          lekerdez();
           console.log('kész');
         })
         .catch(function(error) {
           console.log(error);
         });
     }
+    //*Lekérdezés
     let adatok = ref({});
     lekerdez();
     function lekerdez() {
@@ -68,11 +73,29 @@ export default {
         .then(function(response) {
           adatok.value = response.data;
         })
-        .catch(function(error) {
-          console.log(error);
-        });
+        .catch(console.error);
     }
-    return { tipus, cim, hossz, kiadas, hozzaad, adatok };
+    //*Szavaz
+    function vote(id, newVote) {
+      axios
+        .patch(`http://localhost:5000/api/${id}`, {
+          votes: newVote
+        })
+        .then(()=> {
+          lekerdez();
+        })
+        .catch(console.error);
+    }
+    //*Töröl
+    function del(id) {
+      axios
+        .delete(`http://localhost:5000/api/?_id=${id}`)
+        .then(function() {
+          lekerdez();
+        })
+        .catch(console.error);
+    }
+    return { tipus, cim, hossz, kiadas, hozzaad, adatok, vote, del };
   }
 };
 </script>
