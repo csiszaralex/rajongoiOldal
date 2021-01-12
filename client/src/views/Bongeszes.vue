@@ -28,7 +28,9 @@
 <script>
 import { ref } from 'vue';
 import axios from 'axios';
+import BongeszesCard from '../components/bongeszes/BongeszesCard';
 export default {
+  components: { BongeszesCard },
   setup() {
     const tipus = ref('');
     const cim = ref('');
