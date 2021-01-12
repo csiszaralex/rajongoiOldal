@@ -8,6 +8,7 @@
         <li class="card-text mt-2">{{ valami }}</li>
       </ul>
     </div>
+    <!-- Works! -->
   </div>
 </template>
 <script>

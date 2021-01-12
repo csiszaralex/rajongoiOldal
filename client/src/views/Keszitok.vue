@@ -2,6 +2,7 @@
   <div class="container-fluid">
     <h1 class="display-4 text-center p-5">Készítők</h1>
     <div v-for="keszito in keszitok" :key="keszito.nev" class="col-md-3 card m-2 px-0 text-left">
+    <!-- <div v-for="keszito in ['5', '6', '7']" :key="keszito" class="col-md-3 card m-2 px-0 text-left"> -->
       <keszitok-card
         :forras="keszito.kepForras"
         :nev="keszito.nev"
@@ -9,14 +10,17 @@
         :feladat="keszito.feladat"
       >
       </keszitok-card>
+      <!-- <keszitok-card></keszitok-card> -->
+      <!-- asd -->
     </div>
   </div>
 </template>
 
 <script>
-import keszitokCard from '../components/keszitok/keszitokCard';
+import KeszitokCard from '../components/keszitok/KeszitokCard';
+// import HelpCard from '../components/keszitok/HelpCard';
 export default {
-  Components: [keszitokCard],
+  components: { KeszitokCard },
   data() {
     return {
       keszitok: [
