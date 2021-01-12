@@ -2,7 +2,16 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8">
-        <div v-for="adat in adatok" :key="adat._id" class="col-md-6 card"></div>
+        <div v-for="adat in adatok" :key="adat._id" class="col-md-6 card">
+          <bongeszes-card
+            :id="adat._id"
+            :tipus="adat.tipus"
+            :cim="adat.cim"
+            :hossz="adat.hossz"
+            :kiadas="adat.kiadas"
+            :szavazatok="adat.votes"
+          ></bongeszes-card>
+        </div>
       </div>
       <div class="col-lg-4">
         <h3 class="display-4 mt-5">Hozzáadás:</h3>
@@ -55,7 +64,7 @@ export default {
     lekerdez();
     function lekerdez() {
       axios
-        .get('http://localhost:5000/api', {})
+        .get('http://localhost:5000/api?_votes=desc', {})
         .then(function(response) {
           adatok.value = response.data;
         })
