@@ -5,34 +5,8 @@ const schemaOptions: mongoose.SchemaOptions = {
   versionKey: false,
 };
 
-const breakfastSchema = new mongoose.Schema({
-  eggs: {
-    type: Number,
-    min: [6, "Too few eggs"],
-    max: 12,
-  },
-  bacon: {
-    type: Number,
-    required: [true, "Why no bacon?"],
-  },
-  drink: {
-    type: String,
-    enum: ["Coffee", "Tea"],
-    required(this: any) {
-      return this.bacon > 3;
-    },
-    // validate(this: any, value: any) {},
-  },
-});
-
 const schema: mongoose.Schema = new mongoose.Schema(
   {
-    options: {
-      // required: true,
-      required() {
-        return tipus == 0;
-      },
-    },
     tipus: {
       default: 0,
       required: true,
@@ -40,11 +14,6 @@ const schema: mongoose.Schema = new mongoose.Schema(
       min: 0,
       max: 3,
     },
-    // eggs: {
-    //   type: Number,
-    //   min: [6, 'Too few eggs'],
-    //   max: 12
-    // },
     cim: {
       type: String,
       required: true,
@@ -54,7 +23,7 @@ const schema: mongoose.Schema = new mongoose.Schema(
     hossz: {
       type: Number,
       min: 0,
-      set: Math.round, //? Íráskor
+      get: Math.round, //? Amikor az értéke beállítódik az kell
     },
     kt: {
       type: String,
