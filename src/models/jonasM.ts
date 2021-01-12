@@ -20,6 +20,9 @@ const schema: mongoose.Schema = new mongoose.Schema(
       validate(this: any, value: any) {
         return value !== "";
       },
+      get(val: string) { //. Nagykezdőbetűvel tér vissza
+        return val.charAt(0).toUpperCase() + val.slice(1);
+      },
     },
     hossz: {
       type: Number,
