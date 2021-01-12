@@ -1,26 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
-import store from '../store/index.js';
-
-// import Landing from '../views/Landing.vue';
+import Bongeszes from '../views/Bongeszes.vue';
+import Fooldal from '../views/Fooldal.vue';
+import Keszitok from '../views/Keszitok.vue';
 
 const routes = [
-  // { path: '/', name: 'Home', component: Landing, meta: { requiresUnauth: true } },
+  { path: '/', name: 'Fooldal', component: Fooldal },
+  { path: '/bongeszes', name: 'Bongeszes', component: Bongeszes },
+  { path: '/keszitok', name: 'Keszitok', component: Keszitok }
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-});
-
-//* Esetleges login 
-router.beforeEach(function(to, from, next) {
-  if (to.meta.requiresAuth && !store.getters.isLoggedIn) {
-    //next(false); //. Letiltja
-    next('/auth');
-  } else if (to.meta.requiresUnauth && store.getters.isLoggedIn) {
-    next('/');
-  } else next();
 });
 
 export default router;
