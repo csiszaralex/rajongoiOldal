@@ -6,7 +6,6 @@
     <p class="card-subtitle">
       {{ kiadas }},
       {{ type }}
-      <span class="text-muted">({{ tipus }})</span>
     </p>
     <p class="card-text">
       {{ length }} <br />

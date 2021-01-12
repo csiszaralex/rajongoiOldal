@@ -18,7 +18,12 @@
       <div class="col-lg-4">
         <h3 class="display-4 mt-5">Hozzáadás:</h3>
         <p class="lead m-2">Típus:</p>
-        <input v-model="tipus" type="number" class="m-2 form-control" />
+        <select class="m-2 form-control" v-model="tipus">
+          <option value="0">Zene</option>
+          <option value="1">Film</option>
+          <option value="2">Sorozat</option>
+          <option value="3">Vendégszereplés</option>
+        </select>
         <p class="lead m-2">Cím:</p>
         <input v-model="cim" type="text" class="m-2 form-control" />
         <p class="lead m-2">Hossz:</p>
@@ -44,7 +49,7 @@ export default {
   components: { BongeszesCard },
   setup() {
     //*Hozzáadás
-    const tipus = ref('');
+    const tipus = ref('0');
     const cim = ref('');
     const hossz = ref('');
     const kiadas = ref('');
@@ -60,8 +65,8 @@ export default {
           lekerdez();
           console.log('kész');
         })
-        .catch(function(error) {
-          console.log(error);
+        .catch(err => {
+          console.log(err);
         });
     }
     //*Lekérdezés
@@ -81,7 +86,7 @@ export default {
         .patch(`http://localhost:5000/api/${id}`, {
           votes: newVote
         })
-        .then(()=> {
+        .then(() => {
           lekerdez();
         })
         .catch(console.error);
