@@ -18,45 +18,42 @@
   },
   {
     "_id": { "$oid": "5fcaadd25afe430e607e1cbe" },
-    "tipus": 0,
-    "cim": "BB Good",
-    "hossz": 205,
+    "tipus": 1,
+    "cim": "Mindkét világban a legjobb koncert",
+    "hossz": 5640,
     "kiadas": 2008,
     "votes": 1
   },
   {
     "_id": { "$oid": "5fcaae1e5afe430e607e1cbf" },
     "tipus": 1,
-    "cim": "Film teszt",
-    "hossz": 53016231,
-    "kiadas": 2007,
-    "kiado": "Disney",
+    "cim": "Rocktábor",
+    "hossz": 5734,
+    "kiadas": 2008,
     "votes": 0
   },
   {
     "_id": { "$oid": "5fcb751c3420e18d14555238" },
-    "tipus": 0,
-    "cim": "Zene T",
-    "hossz": 183,
-    "kiadas": 2017,
-    "kiado": "Gold Record",
+    "tipus": 1,
+    "cim": "Jonas Brothers: A 3D Koncertélmény",
+    "hossz": 5600,
+    "kiadas": 2009,
     "votes": 0
   },
   {
     "_id": { "$oid": "5fcb784e782b6c6bec9ccaad" },
-    "tipus": 0,
-    "cim": "Zene T5",
-    "hossz": 117,
-    "kiadas": 2013,
-    "kiado": "Valami híres kiadó",
+    "tipus": 1,
+    "cim": "Banda a buszon",
+    "hossz": 5452,
+    "kiadas": 2009,
     "votes": 3
   },
   {
     "_id": { "$oid": "5fcb7ada0bbae119c45dabad" },
-    "tipus": 2,
-    "cim": "Sori",
+    "tipus": 1,
+    "cim": "Éjjel a múzeumban: Smithsonian harca",
     "hossz": 5238,
-    "kiadas": 2018,
+    "kiadas": 2009,
     "votes": 7
   },
   {
