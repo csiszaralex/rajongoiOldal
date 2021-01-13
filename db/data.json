@@ -11,9 +11,9 @@
   {
     "_id": { "$oid": "5fcaadd25afe430e607e1cbe" },
     "tipus": 0,
-    "cim": "A Little Bit Longer",
+    "cim": "Please Be Mine",
     "hossz": 205,
-    "kiadas": 2008,
+    "kiadas": 2006,
     "votes": 1
   },
   {
@@ -98,41 +98,56 @@
   },
   {
     "_id": { "$oid": "5fcbfca822f4fa9e9409ce40" },
-    "tipus": 1,
-    "cim": "Film T",
-    "kiadas": 2009,
-    "kiado": "Valami híres kiadó",
+    "tipus": 0,
+    "cim": "What I Go to School For",
+    "hossz": 222, 
+    "kiadas": 2006,
     "votes": 5
   },
   {
     "_id": { "$oid": "5fcbfcaf22f4fa9e9409ce41" },
-    "tipus": 2,
-    "cim": "Sori T",
+    "tipus": 0,
+    "cim": "Time for Me to Fly",
+    "hossz": 200, 
     "kiadas": 2006,
     "votes": 7
   },
   {
     "_id": { "$oid": "5fcbfcb122f4fa9e9409ce42" },
-    "tipus": 2,
-    "cim": "Sorozat",
-    "kiadas": 2012,
+    "tipus": 0,
+    "cim": "Year 3000",
+    "hossz": 240, 
+    "kiadas": 2006,
     "votes": 0
   },
   {
     "_id": { "$oid": "5fcbfcb622f4fa9e9409ce43" },
-    "tipus": 3,
-    "cim": "Vendég T",
-    "hossz": 15746,
-    "kiadas": 2012,
-    "kiado": "Marvek",
+    "tipus": 0,
+    "cim": "One Day at a Time",
+    "hossz": 189,
+    "kiadas": 2006,
     "votes": 0
   },
   {
     "_id": { "$oid": "5fcbfcb822f4fa9e9409ce44" },
     "tipus": 0,
-    "cim": "Még egy zene",
-    "hossz": 36,
-    "kiadas": 2010,
+    "cim": "Mandy",
+    "hossz": 236,
+    "kiadas": 2006,
+    "votes": 2
+  },
+  {
+    "tipus": 0,
+    "cim": "BB Good",
+    "hossz": 195,
+    "kiadas": 2008,
+    "votes": 0
+  },
+  {
+    "tipus": 0,
+    "cim": "Shelf",
+    "hossz": 188,
+    "kiadas": 2008,
     "votes": 2
   }
 ]
