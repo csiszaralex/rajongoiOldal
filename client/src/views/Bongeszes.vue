@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8 row">
-        <div v-for="adat in adatok" :key="adat._id" class="col-sm-6 card">
+        <div v-for="(adat, index) in adatok" :key="adat._id" class="col-sm-6 card">
           <bongeszes-card
             :id="adat._id"
             :tipus="adat.tipus"
@@ -10,6 +10,8 @@
             :hossz="adat.hossz"
             :kiadas="adat.kiadas"
             :szavazatok="adat.votes"
+            :srsz="index"
+            :voted="voted"
             @vote="vote"
             @del="del"
           ></bongeszes-card>
@@ -81,12 +83,14 @@ export default {
         .catch(console.error);
     }
     //*Szavaz
+    const voted = ref(false);
     function vote(id, newVote) {
       axios
         .patch(`http://localhost:5000/api/${id}`, {
           votes: newVote
         })
         .then(() => {
+          voted.value = true;
           lekerdez();
         })
         .catch(console.error);
@@ -100,7 +104,7 @@ export default {
         })
         .catch(console.error);
     }
-    return { tipus, cim, hossz, kiadas, hozzaad, adatok, vote, del };
+    return { tipus, cim, hossz, kiadas, hozzaad, adatok, vote, del, voted };
   }
 };
 </script>

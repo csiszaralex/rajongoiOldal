@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="nav nav-tabs navbar-light" id="navId">
-      <span class="navbar-brand ml-2 strong">&lt;3</span>
+      <span class="navbar-brand ml-2 strong">❤</span>
       <li class="nav-item">
         <router-link to="/" id="kezdolap" class="nav-link lead">Kezdőlap</router-link>
       </li>

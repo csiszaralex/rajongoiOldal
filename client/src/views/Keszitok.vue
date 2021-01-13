@@ -30,7 +30,7 @@ export default {
         },
         {
           kepForras: require('@/assets/img/CSA_pic.jpg'),
-          nev: 'Csiszár Alex Gergő',
+          nev: 'Csiszár Alex',
           szerep: 'Backend',
           feladat: [
             'Adatbázis elkészítése',
