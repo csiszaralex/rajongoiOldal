@@ -58,43 +58,42 @@
   },
   {
     "_id": { "$oid": "5fcbf36c3bbb359650e7cf08" },
-    "tipus": 3,
-    "cim": "Vendég",
-    "hossz": 521378,
-    "kiadas": 2015,
+    "tipus": 2,
+    "cim": "Jonas Brothers: A valóra vált álom",
+    "hossz": 2000,
+    "kiadas": 2008,
     "votes": 23
   },
   {
     "_id": { "$oid": "5fcbfc9622f4fa9e9409ce3c" },
     "tipus": 2,
-    "cim": "Teszt",
-    "kiadas": 2018,
-    "kiado": "Magyar",
+    "cim": "Jonas",
+    "hossz": 1574,
+    "kiadas": 2009,
     "votes": 5
   },
   {
     "_id": { "$oid": "5fcbfc9a22f4fa9e9409ce3d" },
-    "tipus": 0,
-    "cim": "Zene",
-    "hossz": 123,
-    "kiadas": 1993,
+    "tipus": 3,
+    "cim": "Hannah Montana",
+    "hossz": 1723,
+    "kiadas": 2007,
     "votes": 2
   },
   {
     "_id": { "$oid": "5fcbfc9e22f4fa9e9409ce3e" },
-    "tipus": 1,
-    "cim": "Film",
-    "kiadas": 2000,
-    "kiado": "Valasdami híres kiadó",
+    "tipus": 3,
+    "cim": "Stúdio DC: Majdnem élő",
+    "hossz": 1733,
+    "kiadas": 2008,
     "votes": 1
   },
   {
     "_id": { "$oid": "5fcbfca222f4fa9e9409ce3f" },
-    "tipus": 0,
-    "cim": "Zene T",
-    "hossz": 241,
-    "kiadas": 2007,
-    "kiado": "Magyar",
+    "tipus": 3,
+    "cim": "Extrém Átalakítás: Otthoni Kiadás",
+    "hossz": 3432,
+    "kiadas": 2008,
     "votes": 3
   },
   {
