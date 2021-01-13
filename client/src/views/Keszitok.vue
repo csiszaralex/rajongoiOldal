@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
-    <h1 class="display-4 text-center p-5">Készítők</h1>
-    <div class="row text-center mt-5" id="keszitok">
+    <h1 class="display-4 text-center px-5 py-3">Készítők</h1>
+    <div class="row text-center" id="keszitok">
       <div v-for="keszito in keszitok" :key="keszito.nev" class="col-md-3 card m-2 px-0 text-left">
         <keszitok-card
           :forras="keszito.kepForras"
