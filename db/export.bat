@@ -1,1 +1,1 @@
-"C:\Program Files\MongoDB\Tools\100\bin\mongoexport.exe" -h localhost -d JBdb -c JB -o data.json
+"C:\Program Files\MongoDB\Tools\100\bin\mongoexport.exe" -h localhost -d JBdb -c JB -o data.json --jsonArray

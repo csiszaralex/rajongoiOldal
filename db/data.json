@@ -1,18 +1,147 @@
-{"_id":{"$oid":"5fcaae1e5afe430e607e1cbf"},"tipus":1,"cim":"Rocktábor","hossz":5734,"kiadas":2008,"votes":0}
-{"_id":{"$oid":"5fcaadd25afe430e607e1cbe"},"tipus":0,"cim":"Please Be Mine","hossz":205,"kiadas":2006,"votes":1}
-{"_id":{"$oid":"5fc8c0e23080518380097a18"},"tipus":0,"cim":"Sucker","hossz":199,"kiadas":2019,"kiado":"Jonas Brothers Recording","votes":10}
-{"_id":{"$oid":"5fcb784e782b6c6bec9ccaad"},"tipus":1,"cim":"Banda a buszon","hossz":5452,"kiadas":2009,"votes":3}
-{"_id":{"$oid":"5fcb751c3420e18d14555238"},"tipus":1,"cim":"Jonas Brothers: A 3D Koncertélmény","hossz":5600,"kiadas":2009,"votes":0}
-{"_id":{"$oid":"5fcb7ada0bbae119c45dabad"},"tipus":1,"cim":"Éjjel a múzeumban: Smithsonian harca","hossz":5238,"kiadas":2009,"votes":7}
-{"_id":{"$oid":"5fcbf36c3bbb359650e7cf08"},"tipus":2,"cim":"Jonas Brothers: A valóra vált álom","hossz":2000,"kiadas":2008,"votes":23}
-{"_id":{"$oid":"5fcbfca222f4fa9e9409ce3f"},"tipus":3,"cim":"Extrém Átalakítás: Otthoni Kiadás","hossz":3432,"kiadas":2008,"votes":3}
-{"_id":{"$oid":"5fcbfc9e22f4fa9e9409ce3e"},"tipus":3,"cim":"Stúdio DC: Majdnem élő","hossz":1733,"kiadas":2008,"votes":1}
-{"_id":{"$oid":"5fcbfca822f4fa9e9409ce40"},"tipus":0,"cim":"What I Go to School For","hossz":222,"kiadas":2006,"votes":5}
-{"_id":{"$oid":"5fcbfc9a22f4fa9e9409ce3d"},"tipus":3,"cim":"Hannah Montana","hossz":1723,"kiadas":2007,"votes":2}
-{"_id":{"$oid":"5fcbfcaf22f4fa9e9409ce41"},"tipus":0,"cim":"Time for Me to Fly","hossz":200,"kiadas":2006,"votes":7}
-{"_id":{"$oid":"5fcbfcb122f4fa9e9409ce42"},"tipus":0,"cim":"Year 3000","hossz":240,"kiadas":2006,"votes":0}
-{"_id":{"$oid":"5fcbfcb622f4fa9e9409ce43"},"tipus":0,"cim":"One Day at a Time","hossz":189,"kiadas":2006,"votes":0}
-{"_id":{"$oid":"5fcbfcb822f4fa9e9409ce44"},"tipus":0,"cim":"Mandy","hossz":236,"kiadas":2006,"votes":2}
-{"_id":{"$oid":"5ffee652cb718b9487b8292f"},"tipus":0,"cim":"Shelf","hossz":188,"kiadas":2008,"votes":2}
-{"_id":{"$oid":"5ffee652cb718b9487b82930"},"tipus":0,"cim":"BB Good","hossz":195,"kiadas":2008,"votes":1}
-{"_id":{"$oid":"5fcbfc9622f4fa9e9409ce3c"},"tipus":2,"cim":"Jonas","hossz":1574,"kiadas":2009,"votes":5}
+[
+  {
+    "_id": { "$oid": "5fcb751c3420e18d14555238" },
+    "tipus": 1,
+    "cim": "Jonas Brothers: A 3D Koncertélmény",
+    "hossz": 5600,
+    "kiadas": 2009,
+    "votes": 0
+  },
+  {
+    "_id": { "$oid": "5fcaadd25afe430e607e1cbe" },
+    "tipus": 0,
+    "cim": "Please Be Mine",
+    "hossz": 205,
+    "kiadas": 2006,
+    "votes": 1
+  },
+  {
+    "_id": { "$oid": "5fcaae1e5afe430e607e1cbf" },
+    "tipus": 1,
+    "cim": "Rocktábor",
+    "hossz": 5734,
+    "kiadas": 2008,
+    "votes": 0
+  },
+  {
+    "_id": { "$oid": "5fcbf36c3bbb359650e7cf08" },
+    "tipus": 2,
+    "cim": "Jonas Brothers: A valóra vált álom",
+    "hossz": 2000,
+    "kiadas": 2008,
+    "votes": 23
+  },
+  {
+    "_id": { "$oid": "5fcbfca222f4fa9e9409ce3f" },
+    "tipus": 3,
+    "cim": "Extrém Átalakítás: Otthoni Kiadás",
+    "hossz": 3432,
+    "kiadas": 2008,
+    "votes": 3
+  },
+  {
+    "_id": { "$oid": "5fcbfc9e22f4fa9e9409ce3e" },
+    "tipus": 3,
+    "cim": "Stúdio DC: Majdnem élő",
+    "hossz": 1733,
+    "kiadas": 2008,
+    "votes": 1
+  },
+  {
+    "_id": { "$oid": "5fcb7ada0bbae119c45dabad" },
+    "tipus": 1,
+    "cim": "Éjjel a múzeumban: Smithsonian harca",
+    "hossz": 5238,
+    "kiadas": 2009,
+    "votes": 7
+  },
+  {
+    "_id": { "$oid": "5fcbfc9a22f4fa9e9409ce3d" },
+    "tipus": 3,
+    "cim": "Hannah Montana",
+    "hossz": 1723,
+    "kiadas": 2007,
+    "votes": 2
+  },
+  {
+    "_id": { "$oid": "5fcbfcaf22f4fa9e9409ce41" },
+    "tipus": 0,
+    "cim": "Time for Me to Fly",
+    "hossz": 200,
+    "kiadas": 2006,
+    "votes": 7
+  },
+  {
+    "_id": { "$oid": "5fcbfcb122f4fa9e9409ce42" },
+    "tipus": 0,
+    "cim": "Year 3000",
+    "hossz": 240,
+    "kiadas": 2006,
+    "votes": 0
+  },
+  {
+    "_id": { "$oid": "5fcbfcb622f4fa9e9409ce43" },
+    "tipus": 0,
+    "cim": "One Day at a Time",
+    "hossz": 189,
+    "kiadas": 2006,
+    "votes": 0
+  },
+  {
+    "_id": { "$oid": "5fcb784e782b6c6bec9ccaad" },
+    "tipus": 1,
+    "cim": "Banda a buszon",
+    "hossz": 5452,
+    "kiadas": 2009,
+    "votes": 3
+  },
+  {
+    "_id": { "$oid": "5fcbfca822f4fa9e9409ce40" },
+    "tipus": 0,
+    "cim": "What I Go to School For",
+    "hossz": 222,
+    "kiadas": 2006,
+    "votes": 5
+  },
+  {
+    "_id": { "$oid": "5fcbfcb822f4fa9e9409ce44" },
+    "tipus": 0,
+    "cim": "Mandy",
+    "hossz": 236,
+    "kiadas": 2006,
+    "votes": 2
+  },
+  {
+    "_id": { "$oid": "5fc8c0e23080518380097a18" },
+    "tipus": 0,
+    "cim": "Sucker",
+    "hossz": 199,
+    "kiadas": 2019,
+    "kiado": "Jonas Brothers Recording",
+    "votes": 10
+  },
+  {
+    "_id": { "$oid": "5ffee652cb718b9487b8292f" },
+    "tipus": 0,
+    "cim": "Shelf",
+    "hossz": 188,
+    "kiadas": 2008,
+    "votes": 2
+  },
+  {
+    "_id": { "$oid": "5ffee652cb718b9487b82930" },
+    "tipus": 0,
+    "cim": "BB Good",
+    "hossz": 195,
+    "kiadas": 2008,
+    "votes": 1
+  },
+  {
+    "_id": { "$oid": "5fcbfc9622f4fa9e9409ce3c" },
+    "tipus": 2,
+    "cim": "Jonas",
+    "hossz": 1574,
+    "kiadas": 2009,
+    "votes": 5
+  }
+]
