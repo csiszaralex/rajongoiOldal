@@ -94,7 +94,7 @@ export default {
     //*Töröl
     function del(id) {
       axios
-        .delete(`http://localhost:5000/api/?_id=${id}`)
+        .delete(`http://localhost:5000/api/${id}`)
         .then(function() {
           lekerdez();
         })
