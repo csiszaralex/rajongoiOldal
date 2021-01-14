@@ -26,8 +26,6 @@ Fejlesztéshez:
 nodemon
 ```
 
-### Frontend
-
 ## Telepítés
 
 ### Adatbázis telepítése:
@@ -54,6 +52,14 @@ npm run compile
 
 ### Frontend:
 
+```bash
+npm i
+```
+
+```bash
+npm run serve
+```
+
 ## Közreműködők
 
 - [Borbély Bálint][bálint]
@@ -72,7 +78,11 @@ npm run compile
   - [ESLint][eslint] - Kód validátor
   - [Prettier][prettier] - Kód formázó
 - Frontend:
+  - [Axios][axios] - Backenddel való kommunikáció
+  - [Vue][vue]
 - Frontend Dev:
+  - [ESLint][eslint] - Kód validátor
+  - [Prettier][prettier] - Kód formázó
 
 ## API
 
@@ -147,26 +157,6 @@ GET  /api/ID?_=hossz
 
 Az \_id értékét minden esetben mutatja.
 
-### Kell még:
-
-- Szöveg vágása: start, end, limit
-  - IDra is
-- Nagyobb, kisebb, nem egyenlő
-  - Where lte, ne, gte
-  - .or .and
-  - .where(X).equals(érték).or(Y).equals(érték)
-- ! jelből .ne, vagy !=
-- "null"-ból null kész, de !Null, v ilyesmi?!
-- Group by
-- Ha valami leg-et keresünk és limit=1, viszont több leg is van, akkor pl more=true-val mindet visszaadni
-  - Ehhez kell: Limit, sort, !Skip
-
-## Tesztek
-
-### Bakcend:
-
-    - Hogy kell
-
 ## License
 
 A projekt és annak tartalma az [MIT license][license] alatt van, beleértve minden forráskódot és megjelenítéshez használt kódot.
@@ -180,6 +170,9 @@ A projekt és annak tartalma az [MIT license][license] alatt van, beleértve min
 [nodemon]: https://nodemon.io/
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/
+[js]: https://www.javascript.com/
+[vue]: https://vuejs.org/
+[axios]: https://www.npmjs.com/package/axios
 
 <!-- Licensz -->
 
