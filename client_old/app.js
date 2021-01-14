@@ -13,8 +13,8 @@ function VoteButtons(id) {
 }
 
 function addVote(currentVotes, id) {
-  console.log("id",id);
-  console.log("vote",currentVotes);
+  console.log("id", id);
+  console.log("vote", currentVotes);
   axios
     .patch(`http://localhost:5000/api/${id}`, {
       votes: currentVotes,
