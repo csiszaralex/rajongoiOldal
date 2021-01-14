@@ -80,6 +80,7 @@ npm run serve
 - Frontend:
   - [Axios][axios] - Backenddel való kommunikáció
   - [Vue][vue]
+  - [Bootstrap][bootstrap]
 - Frontend Dev:
   - [ESLint][eslint] - Kód validátor
   - [Prettier][prettier] - Kód formázó
@@ -173,6 +174,7 @@ A projekt és annak tartalma az [MIT license][license] alatt van, beleértve min
 [js]: https://www.javascript.com/
 [vue]: https://vuejs.org/
 [axios]: https://www.npmjs.com/package/axios
+[bootstrap]: https://getbootstrap.com/
 
 <!-- Licensz -->
 
