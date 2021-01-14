@@ -2,7 +2,7 @@
   {
     "_id": { "$oid": "5fcb751c3420e18d14555238" },
     "tipus": 1,
-    "cim": "Jonas Brothers: A 3D Koncertélmény",
+    "cim": "Jonas Brothers; A 3D Koncertélmény",
     "hossz": 5600,
     "kiadas": 2009,
     "votes": 0
@@ -26,7 +26,7 @@
   {
     "_id": { "$oid": "5fcbf36c3bbb359650e7cf08" },
     "tipus": 2,
-    "cim": "Jonas Brothers: A valóra vált álom",
+    "cim": "Jonas Brothers; A valóra vált álom",
     "hossz": 2000,
     "kiadas": 2008,
     "votes": 23
@@ -34,7 +34,7 @@
   {
     "_id": { "$oid": "5fcbfca222f4fa9e9409ce3f" },
     "tipus": 3,
-    "cim": "Extrém Átalakítás: Otthoni Kiadás",
+    "cim": "Extrém Átalakítás; Otthoni Kiadás",
     "hossz": 3432,
     "kiadas": 2008,
     "votes": 3
@@ -42,7 +42,7 @@
   {
     "_id": { "$oid": "5fcbfc9e22f4fa9e9409ce3e" },
     "tipus": 3,
-    "cim": "Stúdio DC: Majdnem élő",
+    "cim": "Stúdio DC; Majdnem élő",
     "hossz": 1733,
     "kiadas": 2008,
     "votes": 1
@@ -50,7 +50,7 @@
   {
     "_id": { "$oid": "5fcb7ada0bbae119c45dabad" },
     "tipus": 1,
-    "cim": "Éjjel a múzeumban: Smithsonian harca",
+    "cim": "Éjjel a múzeumban; Smithsonian harca",
     "hossz": 5238,
     "kiadas": 2009,
     "votes": 7
