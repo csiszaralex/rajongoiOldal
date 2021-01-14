@@ -42,7 +42,11 @@ export default {
           kepForras: require('@/assets/img/KR_pic.jpg'),
           nev: 'Kardos Raul',
           szerep: 'Frontend',
-          feladat: ['Design (bocsi)', 'Javascript kódolás', 'Alex képének méretre vágása']
+          feladat: [
+            'Design (bocsi)',
+            'Adatbáti feltöltése valós adatokkal',
+            'Alex képének méretre vágása'
+          ]
         }
       ]
     };
