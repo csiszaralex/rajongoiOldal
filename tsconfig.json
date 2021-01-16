@@ -12,14 +12,12 @@
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "baseUrl": "src_old", //Melyik mappa a TS fileok alapja
+    "baseUrl": "src", //Melyik mappa a TS fileok alapja
     "outDir": "./dist", //Melyik mappa legyen a JS fileok helye
-    "types": ["node", "express", "jest"], //A node_modules mappából melyik filok legyenek könnyen importálhatóak
+    // "types": ["node"], //A node_modules mappából melyik filok legyenek könnyen importálhatóak
     "typeRoots": ["node_modules/@types"], //Hol vannak a fentiek
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "incremental": true
-  },
-  "include": ["src_old/**/*"],
-  "exclude": ["node_modules", "client_old", "client", "test", "dist", "**/*spec.ts"]
+  }
 }
